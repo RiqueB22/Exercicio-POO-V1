@@ -40,13 +40,25 @@ abstract public class Conta {
     public void transferir(double valor, Conta destino){
         //Checa se o saldo é > ou = ao valor recebido pelo parametro
         if(getSaldo() >= valor){
-            //Tira o valor na conta remetente
-            setSaldo(getSaldo() - valor);
-            //Registra a trasanção
-            registrarTransacao("transferencia", valor);
-            //Adiciona o valor na conta destinataria
-            destino.setSaldo(destino.getSaldo() + valor);
-            System.out.println("transferencia feita com sucesso!");
+            if(destino instanceof ContaPoupanca && valor <= 500){
+                //Tira o valor na conta remetente
+                setSaldo(getSaldo() - valor);
+                //Registra a trasanção
+                registrarTransacao("transferencia", valor);
+                //Adiciona o valor na conta destinataria
+                destino.setSaldo(destino.getSaldo() + valor);
+                System.out.println("transferencia feita com sucesso!");
+            } else if (destino instanceof ContaCorrente) {
+                //Tira o valor na conta remetente
+                setSaldo(getSaldo() - valor);
+                //Registra a trasanção
+                registrarTransacao("transferencia", valor);
+                //Adiciona o valor na conta destinataria
+                destino.setSaldo(destino.getSaldo() + valor);
+                System.out.println("transferencia feita com sucesso!");
+            }else{
+                System.out.println("O valor está acima do permitido para transferir!");
+            }
         }else {
             System.out.println("Saldo insuficiente!");
         }
