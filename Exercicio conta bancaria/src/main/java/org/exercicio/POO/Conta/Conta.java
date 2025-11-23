@@ -67,7 +67,7 @@ abstract public class Conta {
         System.out.println("Transação registrada com sucesso!");
     }
 
-    //Metodo abstrato depositar
+    //Colsulta extrato
     public void consultarTransacao(){
         for(Transacao t : transacoes){
             System.out.println(t.toString());
