@@ -55,12 +55,7 @@ abstract public class Conta {
 
     //Consulta saldo
     public void consultarSaldo(){
-        System.out.println("***************************************");
-        System.out.println("Banco POO - Consultar Saldo");
-        System.out.println("***************************************");
         System.out.println("Saldo atual: " + getSaldo());
-        System.out.println("Consulta do saldo feita com sucesso!");
-        System.out.println(" ");
     }
 
     //Registra transação
@@ -74,14 +69,9 @@ abstract public class Conta {
 
     //Metodo abstrato depositar
     public void consultarTransacao(){
-        System.out.println("***************************************");
-        System.out.println("Banco POO - Consulta Transações");
-        System.out.println("***************************************");
         for(Transacao t : transacoes){
             System.out.println(t.toString());
         }
-        System.out.println("Consulta de transações feita com sucesso!");
-        System.out.println(" ");
     }
 
     //Get numero

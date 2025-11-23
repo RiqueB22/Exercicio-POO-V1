@@ -1,6 +1,7 @@
 package org.exercicio.POO.Cliente;
 
 import org.exercicio.POO.Conta.Conta;
+import java.util.ArrayList;
 import java.util.List;
 
 //Classe Cliente
@@ -17,6 +18,7 @@ public class Cliente {
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
+        this.Contas = new ArrayList<Conta>();
     }
 
     //Consulta contas

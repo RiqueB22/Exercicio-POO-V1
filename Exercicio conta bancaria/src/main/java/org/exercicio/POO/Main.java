@@ -128,12 +128,22 @@ public class Main {
                         }
                         break;
                     case "4":
+                        System.out.println("***************************************");
+                        System.out.println("Banco POO - Consulta Transações");
+                        System.out.println("***************************************");
                         //Consulta as transações
                         contaC.consultarTransacao();
+                        System.out.println("Consulta de transações feita com sucesso!");
+                        System.out.println(" ");
                         break;
                     case "5":
+                        System.out.println("***************************************");
+                        System.out.println("Banco POO - Consultar Saldo");
+                        System.out.println("***************************************");
                         //Consulta o saldo
                         contaC.consultarSaldo();
+                        System.out.println("Consulta do saldo feita com sucesso!");
+                        System.out.println(" ");
                         break;
                     case "0":
                         //Sai do programa
